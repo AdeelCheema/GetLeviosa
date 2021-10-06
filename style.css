@@ -3,21 +3,21 @@ body {
 }
 
 h1 {
-    font-family: Modern Era,sans-serif;
-    font-size: 3.625rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.625rem;
 }
 
 p {
-    font-family: Modern Era,sans-serif;
-    color: rgba(72,72,72,var(--tw-text-opacity));
-    font-size: 1.25rem;
-    font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(72,72,72,var(--tw-text-opacity));
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 div {
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
