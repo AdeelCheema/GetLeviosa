@@ -39,9 +39,9 @@ p {
   background-color: #fff;
   width: 350px;
   padding: .7em 3em .7em 1em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
   display: inline-block;
   margin: 0; } /* Input Styles */
 
@@ -57,9 +57,9 @@ p {
   background-color: #2386C8 ;
   padding: .7em 2em;
   border: 2px solid #2386C8 ;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
   display: inline-block;
   margin: 1em; } /* Button Styles */
 
