@@ -12,11 +12,19 @@ h1 {
   font-size: 1.625rem;
 }
 
-p {
+#tag {
   font-family: 'Helvetica Neue', sans-serif;
   color: rgba(72,72,72,var(--tw-text-opacity));
   font-size: 250%;
   font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+#subtag {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: rgba(72,72,72,var(--tw-text-opacity));
+  opacity: 60%;
+  font-size: 150%;
   letter-spacing: -0.03em;
 }
 
