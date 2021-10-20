@@ -1,17 +1,23 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   background-color: rgba(103,41,95,var(--tw-bg-opacity));
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 3.625rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.625rem;
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   color: rgba(72,72,72,var(--tw-text-opacity));
-  font-size: 1.25rem;
+  font-size: 250%;
   font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 .root {
@@ -20,6 +26,14 @@ p {
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+#logo_container{
+  margin: 0;
+  position:fixed;
+	top:0;
+	left:0;
+  padding: 22px;
 }
 
 #mc_embed_signup {
@@ -32,7 +46,7 @@ p {
 } /* positions input field horizontally */
 
 #mce-EMAIL {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 1em;
   border: 2px solid #ABB0B2 ;
   color: #343434;
@@ -50,7 +64,8 @@ p {
 } /* positions button horizontally in line with input */
 
 .button {
-  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 1em;
   letter-spacing: .03em;
   color: #fff;
