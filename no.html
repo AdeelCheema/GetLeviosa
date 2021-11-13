@@ -22,6 +22,7 @@
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
 
 <body>
+    <canvas id="world" display="none"></canvas>
     <h1 id="logo_container">Leviosa</h1>
     <div class="root">
         <p id="tag"><strong>We appreciate feedback!</strong></p>
@@ -45,10 +46,15 @@
                     e.preventDefault()
                     const formData = new FormData(form);
                     fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
-                        .then(response => console.log('Success!', response))
+                        .then(response => {
+                            form.reset();
+                            canvas = document.getElementById("world");
+                            canvas.style.display = "block";
+                        })
                         .catch(error => console.error('Error!', error.message))
                 })
             </script>
+            <script src="animation.js"></script>
         </div>
     </div>
 </body>
