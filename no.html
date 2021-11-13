@@ -27,19 +27,28 @@
         <p id="tag"><strong>We appreciate feedback!</strong></p>
         <p id="subtag">Let us know how you felt below </p>
         <div id="mc_embed_signup">
-            <form
-                action="https://getLeviosa.us5.list-manage.com/subscribe/post?u=545cb82fc3f123aa3c08c30e7&amp;id=146244aba7"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                target="_blank" novalidate>
+            <form id="mc-embedded-subscribe-form" name="submit-to-google-sheet" class="validate" target="_blank"
+                novalidate>
                 <div id="mc_embed_signup_scroll">
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                    <input type="text" value="" name="constructive" class="email" id="mce-EMAIL"
                         placeholder="Enter your feedback..." required>
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                            name="b_ee2d8192b75482cc2de0d8068_54dea62a3a" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe"
-                            class="button"></div>
+                    <div class="clear"><input type="submit" value="Submit" id="mc-embedded-subscribe" class="button">
+                    </div>
                 </div>
             </form>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby-iH-y3CZ3q1fqqt0FHVHgO_aXQRwBWdODEPkbKUmOUQISD8eU/exec'
+                const form = document.forms['submit-to-google-sheet']
+
+                form.addEventListener('submit', e => {
+                    console.log('hello');
+                    e.preventDefault()
+                    const formData = new FormData(form);
+                    fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+                        .then(response => console.log('Success!', response))
+                        .catch(error => console.error('Error!', error.message))
+                })
+            </script>
         </div>
     </div>
 </body>
