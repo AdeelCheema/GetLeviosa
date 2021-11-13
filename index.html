@@ -11,15 +11,27 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YM6704PX1R"></script>
     <script>
+        var id = null;
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == 'tid') {
+                id = sParameterName[1];
+            }
+        }
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-YM6704PX1R');
+        gtag('config', 'G-YM6704PX1R', {
+            'user_id': id
+        });
     </script>
 </head>
 
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+
 <body>
     <h1 id="logo_container">Leviosa</h1>
     <div class="root">
@@ -31,8 +43,8 @@
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                 target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address..."
-                        required>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                        placeholder="Enter your email address..." required>
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                             name="b_ee2d8192b75482cc2de0d8068_54dea62a3a" tabindex="-1" value=""></div>
                     <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
@@ -43,4 +55,5 @@
     </div>
 </body>
 </meta>
+
 </html>
