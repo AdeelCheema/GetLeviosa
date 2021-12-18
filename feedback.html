@@ -25,7 +25,7 @@
     <canvas id="world" display="none"></canvas>
     <h1 id="logo_container">Leviosa</h1>
     <div class="root">
-        <p id="tag"><strong>We appreciate feedback!</strong></p>
+        <p id="tag"><strong>Thanks, we appreciate your feedback!</strong></p>
         <p id="subtag">Let us know how you felt below </p>
         <div id="mc_embed_signup">
             <form id="mc-embedded-subscribe-form" name="submit-to-google-sheet" class="validate" target="_blank"
@@ -51,7 +51,14 @@
                     button.style.display = "none";
                     loader.style.display = "inline-block";
                     const formData = new FormData(form);
-                    fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+                    const queryString = document.location.search;
+                    const urlParams = new URLSearchParams(queryString);
+                    if (urlParams.get('tom') == 'holland') {
+                        formData.set('positive', formData.get('constructive'))
+                        formData.set('constructive', '');
+                    }
+                    formData.set('extra_fields', decodeURIComponent(urlParams.toString()).replaceAll('&', ','));
+                    fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: formData })
                         .then(response => {
                             form.reset();
                             loader.style.display = "none";
