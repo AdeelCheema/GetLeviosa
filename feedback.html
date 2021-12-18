@@ -14,7 +14,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-YM6704PX1R');
     </script>
 </head>
@@ -57,7 +56,9 @@
                         formData.set('positive', formData.get('constructive'))
                         formData.set('constructive', '');
                     }
-                    formData.set('extra_fields', decodeURIComponent(urlParams.toString()).replaceAll('&', ','));
+                    formData.set('email', urlParams.get('email'));
+                    formData.set('date', urlParams.get('date'));
+                    formData.set('campaign', urlParams.get('campaign'));
                     fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: formData })
                         .then(response => {
                             form.reset();
