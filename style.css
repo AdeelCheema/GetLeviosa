@@ -48,6 +48,13 @@ h1 {
 	left:0;
   padding: 22px;
 }
+#logo_container:hover{
+  cursor: pointer;
+}
+
+a {
+  all: unset;
+}
 
 #mc_embed_signup {
   border: none;
